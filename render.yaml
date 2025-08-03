@@ -1,7 +1,7 @@
 services:
   - type: web
     name: laravel-teaching-platform
-    env: php
+    runtime: php
     plan: free
     region: frankfurt
     buildCommand: composer install && php artisan config:clear
