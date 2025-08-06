@@ -7,55 +7,87 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# TeachingPlatform
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+منصة تعليمية متكاملة مبنية باستخدام Laravel، تهدف إلى تسهيل إدارة العملية التعليمية إلكترونيًا من خلال لوحة تحكم سهلة الاستخدام باللغة العربية.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## وصف المشروع
 
-## Learning Laravel
+تتيح المنصة للمدرسين والإداريين إدارة الدروس، المستخدمين، الملازم، الامتحانات والاجتماعات، مع إمكانية التحكم الكامل في المحتوى والعمليات من خلال واجهة ويب متجاوبة تعتمد على Bootstrap.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## المميزات الرئيسية
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **إدارة الدروس:** إضافة، تعديل، حذف وعرض الدروس.
+- **إدارة المستخدمين:** تعديل بيانات المستخدمين وحذفهم.
+- **إدارة الملازم:** رفع وتعديل وحذف الملازم التعليمية.
+- **إدارة الامتحانات:** إنشاء وتعديل وحذف الامتحانات وعرض النتائج.
+- **إدارة الاجتماعات:** جدولة الاجتماعات وعرض تفاصيلها.
+- **تسجيل المستخدمين:** دعم تسجيل مستخدمين جدد من خلال لوحة التحكم.
+- **لوحة تحكم متكاملة:** كل العمليات تتم من خلال لوحة تحكم واحدة.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## المتطلبات
 
-### Premium Partners
+- PHP >= 8.0
+- Composer
+- قاعدة بيانات MySQL أو SQLite
+- Node.js و npm (لإدارة الموارد الأمامية)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## خطوات التشغيل
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **استنساخ المشروع:**
+   ```sh
+   git clone <رابط المشروع>
+   cd TeachingPlatform
+   ```
 
-## Code of Conduct
+2. **تثبيت الاعتمادات:**
+   ```sh
+   composer install
+   npm install && npm run dev
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. **إعداد ملف البيئة:**
+   ```sh
+   cp .env.example .env
+   ```
+   ثم عدّل إعدادات قاعدة البيانات في ملف `.env`.
 
-## Security Vulnerabilities
+4. **تشغيل الترحيلات:**
+   ```sh
+   php artisan migrate
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. **تشغيل السيرفر:**
+   ```sh
+   php artisan serve
+   ```
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## هيكل المشروع
+
+- `app/Http/Controllers` : جميع الكنترولرز الخاصة بالعمليات (الدروس، المستخدمين، الاجتماعات، الامتحانات، الملازم)
+- `resources/views` : ملفات الواجهات (Blade)
+- `routes/web.php` : تعريف جميع المسارات الخاصة بالمنصة
+- `database/migrations` : ملفات إنشاء الجداول
+- `public/` : ملفات الدخول والصور والستايلات
+
+---
+
+## المساهمة
+
+للمساهمة يرجى فتح طلب سحب (Pull Request) أو التواصل عبر البريد الإلكتروني.
+
+---
+
+## الرخصة
+
+المشروع مرخص تحت رخصة MIT.
